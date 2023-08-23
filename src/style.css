@@ -1,0 +1,32 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: #333;
+    color: hsl(200, 100%, 90%);
+    max-width: 400px;
+  }
+  .Navbar{
+    width: 100%;
+  }
+  .links{
+    width: 100%;
+    display: flex;
+  }
+  .links>a{
+    margin-left: 15px;
+    padding: 8px;
+  }
+  a{
+    list-style-type: none;
+    text-decoration: none;
+    color: aliceblue;
+  }
+  a:hover{
+    color: aquamarine;
+    transition: all ease-in-out .3s;
+    list-style-type: none;
+    border: 1px solid #fff;
+  }
