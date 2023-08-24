@@ -1,18 +1,27 @@
 // import {Link} from 'react-router-dom';
-import {FaHamburger} from 'react-icons/fa'
+// import { useState } from 'react';
+// import {FaBars} from 'react-icons/fa';
+import {Link} from 'react-router-dom'
+
 
 
 const Navbar = () => {
-    return ( 
+    
+
+    return ( <>
         <nav className="Navbar">
           <div className="links">
-            <a href=''><FaHamburger style={{color:'red',cursor:'pointer'}}/></a>
-            <a href=''>Home</a>
-            <a href="">Shop</a>
-            <a href="">Services</a>
-            <a href="">About Us</a>
+            <ul className='menu'>
+              <li><Link to="">Today's Deals</Link></li>
+              <li><Link to="">Services</Link></li>
+              <li><Link to="">Registry</Link></li>
+              <li><Link to="">Gift Cards</Link></li>
+              <li><Link to="">Sell</Link></li>
+            </ul>
           </div>
         </nav>
+
+        </>
      );
 }
  
