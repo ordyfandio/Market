@@ -10,13 +10,10 @@
     color: hsl(180, 3%, 6%);
     width: 100%;
   }
-  .menubar{
-    position: absolute;
-    top: 23px;
-    left: 22px;
-  }
   nav{
     background: #fff;
+    position: fixed;
+    width: 100%;
   }
   .links{
     width: 40%;
@@ -33,6 +30,7 @@
     justify-content: space-evenly;
     width: 100%;
     align-items: center; 
+    margin-left: 15px;
   }
   li{
     list-style-type: none;
@@ -41,35 +39,73 @@
     padding: 6px;
   }
   li>a:hover{
-    border: 1px solid #ff841f;;
+    border: 1px solid #202e51;
     transition: all .5s ease-in-out;
   }
-
+.menuBurger{
+  position: absolute;
+  top:15px;
+  left: 5px;
+}
 /* Submenu section */
 .submenu{
   background-color: #fff;
-  position: absolute;
-  margin-top: 8px;
+  margin-top: 8px; 
   padding: 30px;
   margin-left: -30px;
-  /* display: none; */
-  transition: 850ms;
-  color: #fff;
+  display: none;
+  width: 100%;
+}
+.open{
+  position: absolute;
+  top: 0;
+  max-width: 500px;
+  display: block;
+  margin-bottom: 40px;
+  color: #0f0f0f;
+  background-color: #fff;
+  height: 100vh;
+}
+.open.active{
+  opacity:1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: var(--speed) ease;
 }
 .submenu.active{
   left: 0;
   transition: 350ms;
 }
 .menu-bar{
-  font-size: 1.3em;
-  color: #3386f2;
+  font-size: 1.2em;
+  color: #121313;
   cursor:'pointer';
+}
+.menu-close{
+  position: absolute;
+  top: 0px;
+  left: 320px;
+  font-size: 1.5em;
+  z-index: 1000;
+  color: red;
+}
+.Sign{
+  background-color: #202e51;
+  padding: 12px;
+  text-align: center;
+  align-items: center;
+  color: #fff;
+}
+.Sign>p{
+  margin-left: -50px;
+  cursor: pointer;
 }
 .btn_close{
   font-size: 25px;
   cursor: pointer;
 }
 .subinfo{
+  padding: 30px;
   margin-top: 15px;
   width: 100%;
 }
