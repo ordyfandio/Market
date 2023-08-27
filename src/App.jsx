@@ -1,7 +1,7 @@
 import Navbar from "./Navbar"
 import './style.css';
 import {  BrowserRouter as Router} from "react-router-dom";
-import Sidebar from "./sidebar";
+import Sidebar from "./Sidebar";
 
 
 
