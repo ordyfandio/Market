@@ -13,6 +13,7 @@
   nav{
     background: #fff;
     position: fixed;
+    top: 0;
     width: 100%;
   }
   .links{
@@ -57,19 +58,19 @@
   width: 100%;
 }
 .open{
-  position: absolute;
-  top: 0;
-  max-width: 500px;
+  max-width: 350px;
   display: block;
   margin-bottom: 40px;
   color: #0f0f0f;
   background-color: #fff;
-  height: 100vh;
+  height: 130vh;
+  will-change: transform;
+  flex-direction: column;
 }
 .open.active{
   opacity:1;
   visibility: visible;
-  transform: translateY(0);
+  transform: translateX(-120);
   transition: var(--speed) ease;
 }
 .submenu.active{
@@ -81,10 +82,20 @@
   color: #121313;
   cursor:'pointer';
 }
+.angleRight{
+  position: absolute;
+  left: 260px;
+  font-size: 1.2em;
+}
+.angleDown{
+  position: absolute;
+  top: 10px;
+  left: 60px;
+  font-size: 1.1em;
+}
 .menu-close{
   position: absolute;
-  top: 0px;
-  left: 320px;
+  left: 350px;
   font-size: 1.5em;
   z-index: 1000;
   color: red;
@@ -95,6 +106,9 @@
   text-align: center;
   align-items: center;
   color: #fff;
+  position: fixed;
+  width: 100%; 
+
 }
 .Sign>p{
   margin-left: -50px;
@@ -103,14 +117,16 @@
 .btn_close{
   font-size: 25px;
   cursor: pointer;
+  position: fixed;
 }
 .subinfo{
-  padding: 30px;
-  margin-top: 15px;
+  padding: 20px;
+  /* margin-top: 45px; */
   width: 100%;
 }
 .subinfo>article{
-  margin-top: 18px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.399);
+  width: 300px;
 }
 h2{
   margin-top: 18px;
@@ -119,9 +135,13 @@ h2{
   padding: 10px;
 }
 .menuArticle>li{
-  margin-top: 15px;
-  margin-left: 8px;
+  position: relative;
+  padding: 8px;
   cursor: pointer;
+}
+.menuArticle>li:hover,FaAngleRight{
+  border: 1px solid rgba(141, 132, 132, 0.068);
+  background-color: #33333344;
 }
 
 
