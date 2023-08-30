@@ -55,6 +55,7 @@
   padding: 30px;
   margin-left: -30px;
   display: none;
+  height: 133vh;
   width: 100%;
 }
 .open{
@@ -63,7 +64,7 @@
   margin-bottom: 40px;
   color: #0f0f0f;
   background-color: #fff;
-  height: 130vh;
+  height: 150vh;
   will-change: transform;
   flex-direction: column;
 }
@@ -84,7 +85,7 @@
 }
 .angleRight{
   position: absolute;
-  left: 260px;
+  left: 200px;
   font-size: 1.2em;
 }
 .angleDown{
@@ -95,20 +96,25 @@
 }
 .menu-close{
   position: absolute;
+  top: -15px;
   left: 350px;
   font-size: 1.5em;
   z-index: 1000;
   color: red;
 }
 .Sign{
-  background-color: #202e51;
+  position: fixed;
+  top: -25px;
+  background-color: #19192e;
   padding: 12px;
   text-align: center;
   align-items: center;
   color: #fff;
-  position: fixed;
   width: 100%; 
-
+  z-index: 10000;
+}
+span{
+  margin-left: 10px;
 }
 .Sign>p{
   margin-left: -50px;
@@ -120,9 +126,13 @@
   position: fixed;
 }
 .subinfo{
+  margin-top: 25px;
+  overflow: scroll;
+  scroll-behavior: smooth;
   padding: 20px;
   /* margin-top: 45px; */
   width: 100%;
+  height: 100vh;
 }
 .subinfo>article{
   border-bottom: 1px solid rgba(128, 128, 128, 0.399);
@@ -139,10 +149,70 @@ h2{
   padding: 8px;
   cursor: pointer;
 }
-.menuArticle>li:hover,FaAngleRight{
+/* .menuArticle>.menuChange:hover,FaAngleRight{
   border: 1px solid rgba(141, 132, 132, 0.068);
   background-color: #33333344;
+} */
+
+/* Sous menu Sidebar Music */
+li>.Music{
+  position: relative;
+  width: 100%;
 }
-
-
-
+.Music{
+  position: absolute;
+  width: 500%;
+  display: inline-block;
+  display: none;
+  background-color: #202e51;
+  padding: 40px auto;
+}
+.scrollbar:hover{
+  background-color: #58555563;
+}
+.scrollbar{
+  position: absolute;
+  left: -10px;
+  margin-top: -20px;
+  display: flex;
+  font-size: 1.2em;
+  width: 500%;
+  padding: 18px;
+  border-bottom: 1px solid #585555;
+  margin-left: -15px;
+  z-index: 100;
+}
+.scrollbar>.btnArrow{
+  margin-left: 15px;
+}
+.contains{
+  margin-top: 55px;
+  width: 100%;
+  padding: 30px;
+}
+.contains>ul>li{
+  margin-top: 60px;
+  width: 100%;
+  /* font-size: 0.8em; */
+}
+h1{
+  margin-left: -5px;
+  font-size: 1.2em;
+}
+.openMusic{
+  margin-top: -90px;
+  margin-left: -20px;
+  width: 500%;
+  display: block;
+  color: #0f0f0f;
+  background-color: #fff;
+  height: 130vh;
+  padding: 40px;
+  z-index: 1000;
+}
+.openMusic.active{
+  opacity:1;
+  visibility: visible;
+  transform: translateX(-120);
+  transition: var(--speed) ease;
+}
