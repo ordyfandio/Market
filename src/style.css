@@ -39,10 +39,10 @@
   li>a{
     padding: 6px;
   }
-  li>a:hover{
+  /* li>a:hover{
     border: 1px solid #202e51;
     transition: all .5s ease-in-out;
-  }
+  } */
 .menuBurger{
   position: absolute;
   top:15px;
@@ -85,13 +85,17 @@
 }
 .angleRight{
   position: absolute;
-  left: 200px;
+  left: 280px;
   font-size: 1.2em;
+  opacity: 0.7;
+}
+.angleRight:hover{
+  opacity: 1;
 }
 .angleDown{
   position: absolute;
   top: 10px;
-  left: 60px;
+  left: 70px;
   font-size: 1.1em;
 }
 .menu-close{
@@ -136,10 +140,11 @@ span{
 }
 .subinfo>article{
   border-bottom: 1px solid rgba(128, 128, 128, 0.399);
-  width: 300px;
+  width: 500%
 }
 h2{
-  margin-top: 18px;
+  margin-top: 25px;
+  font-size: 1.1em;
 }
 .menuArticle{
   padding: 10px;
@@ -148,16 +153,18 @@ h2{
   position: relative;
   padding: 8px;
   cursor: pointer;
+  margin-left: -25px;
+
 }
-/* .menuArticle>.menuChange:hover,FaAngleRight{
-  border: 1px solid rgba(141, 132, 132, 0.068);
-  background-color: #33333344;
-} */
+.menuArticle>li:hover{
+  background-color: #5855552b;
+}
 
 /* Sous menu Sidebar Music */
 li>.Music{
   position: relative;
   width: 100%;
+  border: none;
 }
 .Music{
   position: absolute;
@@ -168,10 +175,11 @@ li>.Music{
   padding: 40px auto;
 }
 .scrollbar:hover{
-  background-color: #58555563;
+  background-color: #5855552b;
 }
 .scrollbar{
   position: absolute;
+  top: 38px;
   left: -10px;
   margin-top: -20px;
   display: flex;
@@ -183,17 +191,24 @@ li>.Music{
   z-index: 100;
 }
 .scrollbar>.btnArrow{
-  margin-left: 15px;
+  margin-left: 30px;
 }
 .contains{
   margin-top: 55px;
-  width: 100%;
-  padding: 30px;
+  width: 500%;
+  padding: 10px;
 }
 .contains>ul>li{
-  margin-top: 60px;
-  width: 100%;
-  /* font-size: 0.8em; */
+  margin-top: 10px;
+  width: 500%;
+  border: none;
+}
+.contains>ul>li:hover{
+  background-color: #5855552b;
+}
+.sous_contains{
+  padding: 20px;
+  margin-left: -50px; 
 }
 h1{
   margin-left: -5px;
@@ -215,4 +230,319 @@ h1{
   visibility: visible;
   transform: translateX(-120);
   transition: var(--speed) ease;
+}
+
+/* AppStore Section */
+
+.openStore{
+  margin-top: -90px;
+  margin-left: -20px;
+  width: 500%;
+  display: block;
+  color: #0f0f0f;
+  background-color: #fff;
+  height: 130vh;
+  padding: 40px;
+  z-index: 1000;
+}
+.Store{
+  position: absolute;
+  width: 500%;
+  display: inline-block;
+  display: none;
+  background-color: #202e51;
+  padding: 40px auto;
+}
+.scrollbarStore:hover{
+  background-color: #5855552b;
+}
+.scrollbarStore{
+  position: absolute;
+  top: 5px;
+  left: 20px;
+  margin-top: -20px;
+  display: flex;
+  font-size: 1.2em;
+  width: 500%;
+  padding: 18px;
+  border-bottom: 1px solid #585555;
+  margin-left: -15px;
+  z-index: 100;
+}
+.scrollbarStore>.btnArrow{
+  margin-left: 30px;
+}
+
+/*section Books  */
+
+
+.openBook{
+  margin-top: -130px;
+  margin-left: -20px;
+  width: 500%;
+  display: block;
+  color: #0f0f0f;
+  background-color: #fff;
+  height: 130vh;
+  padding: 40px;
+  z-index: 1000;
+}
+.Book{
+  position: absolute;
+  width: 500%;
+  display: inline-block;
+  display: none;
+  background-color: #202e51;
+  padding: 40px auto;
+}
+.scrollbarBook:hover{
+  background-color: #5855552b;
+}
+.scrollbarBook{
+  position: absolute;
+  top: 5px;
+  left: 20px;
+  margin-top: -20px;
+  display: flex;
+  font-size: 1.2em;
+  width: 500%;
+  padding: 18px;
+  border-bottom: 1px solid #585555;
+  margin-left: -15px;
+  z-index: 100;
+}
+.scrollbarBook>.btnArrow{
+  margin-left: 30px;
+}
+
+/* Section Computer */
+
+.openComp{
+  margin-top: -230px;
+  margin-left: -20px;
+  width: 500%;
+  display: block;
+  color: #0f0f0f;
+  background-color: #fff;
+  height: 130vh;
+  padding: 40px;
+  z-index: 1000;
+}
+.Comp{
+  position: absolute;
+  width: 500%;
+  display: inline-block;
+  display: none;
+  background-color: #202e51;
+  padding: 40px auto;
+}
+.scrollbarComp:hover{
+  background-color: #5855552b;
+}
+.scrollbarComp{
+  position: absolute;
+  top: 5px;
+  left: 0px;
+  margin-top: -20px;
+  display: flex;
+  font-size: 1.2em;
+  width: 500%;
+  padding: 18px;
+  border-bottom: 1px solid #585555;
+  margin-left: -15px;
+  z-index: 100;
+}
+.scrollbarComp>.btnArrow{
+  margin-left: 30px;
+}
+
+/* section Electronic */
+
+.openElect{
+  margin-top: -270px;
+  margin-left: -20px;
+  width: 500%;
+  display: block;
+  color: #0f0f0f;
+  background-color: #fff;
+  height: 130vh;
+  padding: 40px;
+  z-index: 1000;
+}
+.Elect{
+  position: absolute;
+  width: 500%;
+  display: inline-block;
+  display: none;
+  background-color: #202e51;
+  padding: 40px auto;
+}
+.scrollbarElect:hover{
+  background-color: #5855552b;
+}
+.scrollbarElect{
+  position: absolute;
+  top: 5px;
+  left: 0px;
+  margin-top: -20px;
+  display: flex;
+  font-size: 1.2em;
+  width: 500%;
+  padding: 18px;
+  border-bottom: 1px solid #585555;
+  margin-left: -15px;
+  z-index: 100;
+}
+.scrollbarElect>.btnArrow{
+  margin-left: 30px;
+}
+
+/* Smart Phone Section */
+
+.openPhone{
+  margin-top: -300px;
+  margin-left: -20px;
+  width: 500%;
+  display: block;
+  color: #0f0f0f;
+  background-color: #fff;
+  height: 130vh;
+  padding: 40px;
+  z-index: 1000;
+}
+.phone{
+  position: absolute;
+  width: 500%;
+  display: inline-block;
+  display: none;
+  background-color: #202e51;
+  padding: 40px auto;
+}
+.scrollbarPhone:hover{
+  background-color: #5855552b;
+}
+.scrollbarPhone{
+  position: absolute;
+  top: 5px;
+  left: 0px;
+  margin-top: -20px;
+  display: flex;
+  font-size: 1.2em;
+  width: 500%;
+  padding: 18px;
+  border-bottom: 1px solid #585555;
+  margin-left: -15px;
+  z-index: 100;
+}
+.scrollbarPhone>.btnArrow{
+  margin-left: 30px;
+}
+
+/* section Gift Card */
+
+.openCard{
+  margin-top: -450px;
+  margin-left: -20px;
+  width: 500%;
+  display: block;
+  color: #0f0f0f;
+  background-color: #fff;
+  height: 130vh;
+  padding: 40px;
+  z-index: 1000;
+}
+.card{
+  position: absolute;
+  width: 500%;
+  display: inline-block;
+  display: none;
+  background-color: #202e51;
+  padding: 40px auto;
+}
+.scrollbarCard:hover{
+  background-color: #5855552b;
+}
+.scrollbarCard{
+  position: absolute;
+  top: 5px;
+  left: 0px;
+  margin-top: -20px;
+  display: flex;
+  font-size: 1.2em;
+  width: 500%;
+  padding: 18px;
+  border-bottom: 1px solid #585555;
+  margin-left: -15px;
+  z-index: 100;
+}
+.scrollbarCard>.btnArrow{
+  margin-left: 30px;
+}
+
+/* international Shopping section */
+
+.openShop{
+  margin-top: -530px;
+  margin-left: -20px;
+  width: 500%;
+  display: block;
+  color: #0f0f0f;
+  background-color: #fff;
+  height: 130vh;
+  padding: 40px;
+  z-index: 1000;
+}
+.shop{
+  position: absolute;
+  width: 500%;
+  display: inline-block;
+  display: none;
+  background-color: #202e51;
+  padding: 40px auto;
+}
+.scrollbarShop:hover{
+  background-color: #5855552b;
+}
+.scrollbarShop{
+  position: absolute;
+  top: 5px;
+  left: 0px;
+  margin-top: -20px;
+  display: flex;
+  font-size: 1.2em;
+  width: 500%;
+  padding: 18px;
+  border-bottom: 1px solid #585555;
+  margin-left: -15px;
+  z-index: 100;
+}
+.scrollbarShop>.btnArrow{
+  margin-left: 30px;
+}
+
+/* Section ScrollDown */
+
+.menuChange{
+  width: 100%;
+}
+#menuchange{
+  display: none;
+}
+.scrollDown{
+  /* position: absolute; */
+  /* padding: 12px; */
+  width: 100%;
+  display: none;
+}
+.openScrollDown{
+  display: block;
+  width: 100%;
+}
+.subDown>li{
+  margin-top: 12px;
+  padding: 8px;
+  margin-left: -30px;
+}
+.subDown>li:hover{
+  background-color: #5855552b;
 }
