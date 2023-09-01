@@ -37,7 +37,16 @@
     list-style-type: none;
   }
   li>a{
-    padding: 6px;
+    padding: 8px;
+  }
+  .option_menu{
+    padding: 5px;
+  }
+  .option_menu:hover{
+    border: 1px solid #585555;
+  }
+  .btn_burger{
+    margin-top: -3px;
   }
   /* li>a:hover{
     border: 1px solid #202e51;
@@ -45,7 +54,7 @@
   } */
 .menuBurger{
   position: absolute;
-  top:15px;
+  top:25px;
   left: 5px;
 }
 /* Submenu section */
@@ -57,6 +66,31 @@
   display: none;
   height: 133vh;
   width: 100%;
+  transform: translateX(-150px);
+}
+@keyframes slideLeft {
+  from{
+    transform:translateX(-150px);
+  }
+  to{
+    transform: translateX(0);
+  }
+}
+@keyframes slideRight {
+  from{
+    transform:translateX(0);
+  }
+  to{
+    transform: translateX(-150px);
+  }
+}
+@keyframes slideTop {
+  from{
+    transform:translateY(0);
+  }
+  to{
+    transform: translateY(15px);
+  }
 }
 .open{
   max-width: 350px;
@@ -67,16 +101,24 @@
   height: 150vh;
   will-change: transform;
   flex-direction: column;
+  transform: translateX(0px);
+  
+  animation-name: slideLeft ;
+  animation-duration: 0.09s;
+  animation-timing-function: ease-out;
+  animation-delay: 0.09s;
+  animation-direction: var(--speed);
+  animation-fill-mode: backwards;
+  transition: 350ms;
 }
 .open.active{
   opacity:1;
   visibility: visible;
-  transform: translateX(-120);
+  transform: translateX(-10);
   transition: var(--speed) ease;
 }
 .submenu.active{
   left: 0;
-  transition: 350ms;
 }
 .menu-bar{
   font-size: 1.2em;
@@ -214,6 +256,7 @@ h1{
   margin-left: -5px;
   font-size: 1.2em;
 }
+
 .openMusic{
   margin-top: -90px;
   margin-left: -20px;
@@ -224,6 +267,16 @@ h1{
   height: 130vh;
   padding: 40px;
   z-index: 1000;
+
+  transform: translateX(0px);
+  
+  animation-name: slideLeft ;
+  animation-duration: 0.1s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.1s;
+  animation-direction: alternate;
+  animation-fill-mode: both;
+  transition: 350ms;
 }
 .openMusic.active{
   opacity:1;
@@ -244,6 +297,16 @@ h1{
   height: 130vh;
   padding: 40px;
   z-index: 1000;
+
+  transform: translateX(0px);
+  
+  animation-name: slideLeft ;
+  animation-duration: 0.09s;
+  animation-timing-function: ease-out;
+  animation-delay: 0.09s;
+  animation-direction: var(--speed);
+  animation-fill-mode: backwards;
+  transition: 350ms;
 }
 .Store{
   position: absolute;
@@ -286,6 +349,16 @@ h1{
   height: 130vh;
   padding: 40px;
   z-index: 1000;
+
+  transform: translateX(0px);
+  
+  animation-name: slideLeft ;
+  animation-duration: 0.09s;
+  animation-timing-function: ease-out;
+  animation-delay: 0.09s;
+  animation-direction: var(--speed);
+  animation-fill-mode: backwards;
+  transition: 350ms;
 }
 .Book{
   position: absolute;
@@ -327,6 +400,16 @@ h1{
   height: 130vh;
   padding: 40px;
   z-index: 1000;
+
+  transform: translateX(0px);
+  
+  animation-name: slideLeft ;
+  animation-duration: 0.09s;
+  animation-timing-function: ease-out;
+  animation-delay: 0.09s;
+  animation-direction: var(--speed);
+  animation-fill-mode: backwards;
+  transition: 350ms;
 }
 .Comp{
   position: absolute;
@@ -368,6 +451,16 @@ h1{
   height: 130vh;
   padding: 40px;
   z-index: 1000;
+
+  transform: translateX(0px);
+  
+  animation-name: slideLeft ;
+  animation-duration: 0.09s;
+  animation-timing-function: ease-out;
+  animation-delay: 0.09s;
+  animation-direction: var(--speed);
+  animation-fill-mode: backwards;
+  transition: 350ms;
 }
 .Elect{
   position: absolute;
@@ -409,6 +502,16 @@ h1{
   height: 130vh;
   padding: 40px;
   z-index: 1000;
+
+  transform: translateX(0px);
+  
+  animation-name: slideLeft ;
+  animation-duration: 0.09s;
+  animation-timing-function: ease-out;
+  animation-delay: 0.09s;
+  animation-direction: var(--speed);
+  animation-fill-mode: backwards;
+  transition: 350ms;
 }
 .phone{
   position: absolute;
@@ -450,6 +553,16 @@ h1{
   height: 130vh;
   padding: 40px;
   z-index: 1000;
+
+  transform: translateX(0px);
+  
+  animation-name: slideLeft ;
+  animation-duration: 0.09s;
+  animation-timing-function: ease-out;
+  animation-delay: 0.09s;
+  animation-direction: var(--speed);
+  animation-fill-mode: backwards;
+  transition: 350ms;
 }
 .card{
   position: absolute;
@@ -466,7 +579,7 @@ h1{
   position: absolute;
   top: 5px;
   left: 0px;
-  margin-top: -20px;
+  margin-top: -15px;
   display: flex;
   font-size: 1.2em;
   width: 500%;
@@ -482,7 +595,7 @@ h1{
 /* international Shopping section */
 
 .openShop{
-  margin-top: -530px;
+  margin-top: -510px;
   margin-left: -20px;
   width: 500%;
   display: block;
@@ -491,6 +604,16 @@ h1{
   height: 130vh;
   padding: 40px;
   z-index: 1000;
+
+  transform: translateX(0px);
+  
+  animation-name: slideLeft ;
+  animation-duration: 0.09s;
+  animation-timing-function: ease-out;
+  animation-delay: 0.09s;
+  animation-direction: var(--speed);
+  animation-fill-mode: backwards;
+  transition: 350ms;
 }
 .shop{
   position: absolute;
@@ -507,7 +630,7 @@ h1{
   position: absolute;
   top: 5px;
   left: 0px;
-  margin-top: -20px;
+  margin-top: -10px;
   display: flex;
   font-size: 1.2em;
   width: 500%;
@@ -522,9 +645,6 @@ h1{
 
 /* Section ScrollDown */
 
-.menuChange{
-  width: 100%;
-}
 #menuchange{
   display: none;
 }
@@ -537,6 +657,15 @@ h1{
 .openScrollDown{
   display: block;
   width: 100%;
+  transform: translateY(0px);
+  
+  animation-name: slideTop ;
+  animation-duration: 0.09s;
+  animation-timing-function: ease-out;
+  animation-delay: 0.09s;
+  animation-direction: var(--speed);
+  animation-fill-mode: backwards;
+  transition: 350ms;
 }
 .subDown>li{
   margin-top: 12px;

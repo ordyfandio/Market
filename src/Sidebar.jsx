@@ -70,7 +70,7 @@ const Sidebar = () => {
                     <h2>Digital Content & Devices</h2>
                     <ul className='menuArticle'>
                         <li onClick={showSideBarMusic} style={{position:'relative'}} className='menuChange'><Link >Music <FaAngleRight className='angleRight' onClick={showSideBarMusic}/>
-                        <div className={SideBarMusic ? 'openMusic active':'Music'} style={{position:'absolute'}}>
+                        <div className={SideBarMusic ? 'openMusic active':'Music'} style={{position:'absolute'}} >
                             <div className="scrollbar">
                                 <FaArrowLeft className='btnArrow'/>
                                 <span>Main Menu</span>
@@ -201,13 +201,13 @@ const Sidebar = () => {
                             </div>
                         </div>
                         </Link></li>
-                        <li className='menuChange' onClick={showScrollDown} ><Link>See All <FaAngleDown className='angleDown' onClick={showScrollDown}/></Link></li>
+                        <li className='menuChange' onClick={showScrollDown}><Link>See All <FaAngleDown className='angleDown' onClick={showScrollDown}/></Link></li>
                         <div className={ScrollDown ?'openScrollDown': 'scrollDown'}>
                             <ul className='subDown'>
-                                <li>Automotive</li>
-                                <li>Baby</li>
-                                <li>Girl's Fashion</li>
-                                <li>Boy's Fashion</li>
+                                <li><Link>Automotive <FaAngleRight style={{marginLeft:'180px',fontSize:'1.1em'}}/></Link></li>
+                                <li><Link>Baby <FaAngleRight style={{marginLeft:'222px',fontSize:'1.1em'}}/></Link></li>
+                                <li><Link>Girl's Fashion <FaAngleRight style={{marginLeft:'160px',fontSize:'1.1em'}}/></Link></li>
+                                <li><Link>Boy's Fashion <FaAngleRight style={{marginLeft:'160px',fontSize:'1.1em'}}/></Link></li>
                             </ul>
                         </div>
                     </ul>
